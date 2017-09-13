@@ -13,6 +13,7 @@
                       mode="EDIT"
                       recordUpdated="{!c.onRecordUpdated}" />
     
+    <c:PlatformEventSubscriber eventName="Mix_Approved__e" onMessage="{!c.messageHandler}"/>
 	<c:Path steps="{!v.steps}" currentStep="{!v.record.Status__c}" stepChange="{!c.onStepChange}"/>
     
 </aura:component>
