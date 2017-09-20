@@ -1,0 +1,8 @@
+{
+    "orgName": "JWS Demo Company",
+    "country": "US",
+    "features": "API;AuthorApex;CustomApps;CustomTabs;SalesWave;Communities;PersonAccounts;ServiceCloud;ServiceWave",
+    "orgPreferences": {
+        "enabled": ["S1DesktopEnabled", "ChatterEnabled", "Translation", "IsQuoteEnabled", "IsIdeasEnabled", "IsKnowledgeEnabled", "EventLogWaveIntegEnabled", "PathAssistantsEnabled", "NetworksEnabled"]
+    }
+}
