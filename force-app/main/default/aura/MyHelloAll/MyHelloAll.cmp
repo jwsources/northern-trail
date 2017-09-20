@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <H1>Hello All architects </H1>
+</aura:component>
