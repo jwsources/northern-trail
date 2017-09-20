@@ -1,0 +1,6 @@
+<aura:component access="global">
+
+    <lightning:select name="subCategorySelector" label="Subcategory">
+    </lightning:select>
+
+</aura:component>

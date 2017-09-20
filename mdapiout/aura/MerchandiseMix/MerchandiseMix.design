@@ -1,0 +1,3 @@
+<design:component label="Merchandise Mix">
+    <design:attribute name="showChart" label="Mix Breakdown Chart" default="true"/>
+</design:component>

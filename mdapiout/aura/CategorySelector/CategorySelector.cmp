@@ -1,0 +1,16 @@
+<aura:component controller="MerchandiseController" access="global">
+
+  	<aura:registerEvent name="onchange" type="c:ValueChange"/>
+	
+    <ltng:require scripts="{!$Resource.DataCache}" afterScriptsLoaded="{!c.afterScriptsLoaded}"/>
+    
+    <aura:attribute name="categories" type="String[]" />
+    <aura:attribute name="selectedValue" type="String"/>
+
+    <lightning:select name="categorySelector" label="Category" value="{!v.selectedValue}" onchange="{!c.changeHandler}">
+        <aura:iteration items="{!v.categories}" var="category">
+            <option text="{#category}" value="{#category}"/>
+        </aura:iteration>
+    </lightning:select>
+
+</aura:component>

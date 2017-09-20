@@ -1,0 +1,3 @@
+<design:component label="Merchandise Mix Path">
+	<design:attribute name="pathName" datasource="Merchandising Mix,Order,Opportunity" label="Path Name" default="Merchandising Mix"/>	
+</design:component>

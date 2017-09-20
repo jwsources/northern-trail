@@ -1,0 +1,56 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="MerchandiseMixController" access="global">
+    
+    <ltng:require scripts="{!$Resource.countup}" />
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="mixItems" type="Mix_Item__c[]" default="[]"/>
+    <aura:attribute name="totalQty" type="Integer" default="0"/>
+    <aura:attribute name="totalMSRP" type="Decimal" default="0"/>
+    <aura:attribute name="showChart" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div>
+        <lightning:layout class="header">
+            <lightning:layoutitem padding="horizontal-medium">
+                <lightning:icon iconName="custom:custom17"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem flexibility="grow">
+                <lightning:layout class="header-fields">
+                    <lightning:layoutitem >
+                        <p class="slds-text-title slds-truncate slds-m-bottom_xx-small">Total MSRP</p>
+                        <p class="slds-text-heading_small slds-truncate total-msrp">
+                            $<span aura:id="totalMSRP">0</span>
+                        </p>
+                    </lightning:layoutitem>
+                    <lightning:layoutitem >
+                        <p class="slds-text-title slds-truncate slds-m-bottom_xx-small">Products</p>
+                        <p class="slds-text-heading_small slds-truncate ">{!v.mixItems.length}</p>
+                    </lightning:layoutitem>
+                    <lightning:layoutitem padding="horizontal-large">
+                        <p class="slds-text-title slds-truncate slds-m-bottom_xx-small">Qty</p>
+                        <p class="slds-text-heading_small slds-truncate">{!v.totalQty}</p>
+                    </lightning:layoutitem>
+                    <aura:if isTrue="{!v.showChart}">
+                        <lightning:layoutitem padding="horizontal-large">
+                            <c:MixChart mixItems="{!v.mixItems}"/>
+                        </lightning:layoutitem>
+                    </aura:if>
+                </lightning:layout>            
+            </lightning:layoutitem>
+        </lightning:layout>
+        
+        <div aura:id="dropZone" class="drop-zone" ondrop="{!c.dropHandler}" ondragover="{!c.dragOverHandler}" ondragleave="{!c.dragLeaveHandler}">
+	        <lightning:layout multipleRows="true">
+	            <aura:iteration items="{!v.mixItems}" var="mixItem" indexVar="index">
+					<lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="6" largeDeviceSize="4">
+						<c:MixItemTile mixItem="{#mixItem}" index="{#index}" 
+							onDelete="{!c.mixItemDeleteHandler}"
+							onChange="{!c.mixItemChangeHandler}"/>
+					</lightning:layoutItem>	
+	            </aura:iteration>
+			</lightning:layout>
+		</div>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component access="global">
+
+    <aura:registerEvent name="onchange" type="c:ValueChange" />
+
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="input-unique-id">Search</label>
+        <div class="slds-form-element__control">
+            <input type="text" aura:id="searchKey" class="slds-input" onkeyup="{!c.keyupHandler}" />
+        </div>
+    </div>
+
+</aura:component>

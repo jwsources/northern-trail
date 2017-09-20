@@ -1,0 +1,66 @@
+.THIS {
+    height: 36px;
+    width: 100%;
+    position: relative;
+    /*margin-left: -28px;*/
+    margin-top: 46px;
+}
+
+.THIS .label {
+	position: absolute;
+    top: 64px;
+    left: 44px;
+    right: 0;
+    text-align: center;
+    max-width: 350px;
+}
+    
+.THIS .slider {
+    /*
+    position: absolute;
+    top: 42px;
+    left: 44px;
+    right: 0;
+    */
+    width: 270px;
+    margin-left: 28px;
+}
+
+.THIS .noUi-connect {
+  /*background: #0070D2;*/
+  /*background: #0070D2;*/
+  background: #FF6600;
+
+}
+
+.THIS .noUi-tooltip {
+  font-size: .8125rem;
+    border: none;
+    color: #FF6600;
+    font-weight: bold;
+}
+
+.THIS .noUi-target,
+.THIS .noUi-handle {
+	box-shadow: none !important;    
+}
+
+.THIS .noUi-target {
+    background: #FFFFFF;
+    /*border: 1px solid rgb(216, 221, 230);*/
+    border: 1px solid #FF6600;
+    border-radius: .25rem;
+}
+/*
+.THIS .noUi-horizontal {
+    height: 6px;
+    border: 1px solid #EEE;
+    border-radius: 0;
+}
+
+.THIS .noUi-horizontal .noUi-handle {
+    height: 26px;
+    left: -18px;
+    top: -11px;
+}
+*/

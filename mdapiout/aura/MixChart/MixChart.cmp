@@ -1,0 +1,62 @@
+<aura:component implements="force:hasRecordId" access="global" >
+    
+    <ltng:require scripts="{!$Resource.chartjs}"
+                  afterScriptsLoaded="{!c.scriptsLoaded}" />
+    
+    <aura:attribute name="mixItems" type="Mix_Item__c[]" default="[]"/>
+    
+    <aura:handler name="change" value="{!v.mixItems}" action="{!c.mixItemsChangeHandler}"/>
+    
+    <lightning:layout >
+        <lightning:layoutItem >
+            <div class="chart">
+                <canvas aura:id="chart" height="60" width="60"></canvas>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem class="slds-text-body_small">
+            <lightning:layout verticalAlign="center">
+                <lightning:layoutItem padding="horizontal-small">
+                    <div class="legend womens"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem >
+                    Womens
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout verticalAlign="center">
+                <lightning:layoutItem padding="horizontal-small">
+                    <div class="legend mens"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem >
+                    Mens
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout verticalAlign="center">
+                <lightning:layoutItem padding="horizontal-small">
+                    <div class="legend kids"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem >
+                    Kids
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:layoutItem>
+        <lightning:layoutItem class="slds-text-body_small">
+            <lightning:layout verticalAlign="center">
+                <lightning:layoutItem padding="horizontal-small">
+                    <div class="legend gear"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem >
+                    Gear
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout verticalAlign="center">
+                <lightning:layoutItem padding="horizontal-small">
+                    <div class="legend electronics"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem >
+                    Electronics
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:layoutItem>
+    </lightning:layout>    
+    
+</aura:component>
