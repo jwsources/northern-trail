@@ -4,7 +4,6 @@
     <label>NTO Manufacturing</label>
     <oauthConfig>
         <callbackUrl>http://localhost:3000/oauth/_callback</callbackUrl>
-        <consumerKey>3MVG97wqanbUM37IIdyRCyLPCDFhBK3R1q9nbzEcJbGuc4N.hSy6jB7fOoff7SRFcAW06Npp54PtPvhsXQ_Hv</consumerKey>
-        <scopes>Full</scopes>
+         <scopes>Full</scopes>
     </oauthConfig>
 </ConnectedApp>
