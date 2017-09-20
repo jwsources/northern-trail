@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
     <contactEmail>jweijters@salesforce.com</contactEmail>
-    <label>NTO Manufacturing</label>
+    <label>NTO Manufacturing 2</label>
     <oauthConfig>
         <callbackUrl>http://localhost:3000/oauth/_callback</callbackUrl>
          <scopes>Full</scopes>

@@ -1,3 +1,9 @@
 <aura:component implements="flexipage:availableForAllPageTypes" access="global">
-    <H1>Hello All architects </H1>
+
+    <aura:attribute name="displayText" type="String" default="Hello World!" />
+
+    <lightning:icon iconName="action:announcement"/>
+    
+    <div class="slds-text-heading_medium">{!v.displayText}</div>
+
 </aura:component>

@@ -1,0 +1,3 @@
+<design:component label="My Hello">
+    <design:attribute name="displayText" label="Text" default="Hello World!" />
+</design:component>
