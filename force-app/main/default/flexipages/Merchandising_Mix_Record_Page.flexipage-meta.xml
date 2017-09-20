@@ -40,6 +40,9 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentName>MyHelloAll</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentInstanceProperties>
                 <name>showCategory</name>
                 <value>true</value>
