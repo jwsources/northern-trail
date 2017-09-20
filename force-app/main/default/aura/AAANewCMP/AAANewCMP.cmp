@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+	<h1>HELLO SHELL</h1>
+
+</aura:component>	
