@@ -41,6 +41,13 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
+                <name>displayText</name>
+                <value>Hello Cloud Elite!</value>
+            </componentInstanceProperties>
+            <componentName>MyHelloAll</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
                 <name>showCategory</name>
                 <value>true</value>
             </componentInstanceProperties>

@@ -29,14 +29,18 @@ sfdx force:data:tree:import --plan ./data/sample-data-Merchandise__c-plan.json
 Show Dev Hub
 
 sfdx force:source:status
-Change Page
+
+Change Lighting Component
 sfdx force:source:status
 sfdx force:source:pull -u test-79coxizecmur@jws_demo_company.net
 
-
-
+Change Page, add Component
+sfdx force:source:status
+sfdx force:source:pull -u test-79coxizecmur@jws_demo_company.net
 
 sfdx force:org:delete -u test-kvpds1nnkoaq@jws_demo_company.net
+
+Next CI: UI Git Push
 
 
 
