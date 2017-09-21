@@ -1,0 +1,42 @@
+sfdx force:project:create -n 01_Demo_project
+Open VSCode: Show files, initialize GIT repo
+
+Show SFDX extension bundle
+
+UI: Create new Lightning Component
+sfdx force:lightning:component:create --componentname MyNew --outputdir force-app/main/default/aura
+
+Switch to NTO 
+
+UI: Authorize Dev Hub
+sfdx force:auth:web:login --setdefaultdevhubusername
+
+sfdx force:config:list
+
+sfdx force:org:create -s -f config/project-scratch-def.json -a “nto_demo”
+Show config json
+
+sfdx force:org:list
+UI: Open scratch org
+
+sfdx force:source:status
+
+Push source:
+sfdx force:source:push -u test-kvpds1nnkoaq@jws_demo_company.net
+sfdx force:user:permset:assign -n nto
+sfdx force:data:tree:import --plan ./data/sample-data-Merchandise__c-plan.json
+
+Show Dev Hub
+
+sfdx force:source:status
+Change Page
+sfdx force:source:status
+sfdx force:source:pull -u test-79coxizecmur@jws_demo_company.net
+
+
+
+
+sfdx force:org:delete -u test-kvpds1nnkoaq@jws_demo_company.net
+
+
+
